@@ -1,0 +1,42 @@
+[ 2015-05-13T00:07:13+08:00 ] 127.0.0.1 /thinkPHP/%7BU('User/Login/index'%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:{U('User
+
+[ 2015-05-13T00:07:21+08:00 ] 127.0.0.1 /thinkPHP/%7BU('User/Login/index'%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:{U('User
+
+[ 2015-05-13T00:16:23+08:00 ] 127.0.0.1 /thinkPHP/%7B%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:{}
+
+[ 2015-05-13T00:17:30+08:00 ] 127.0.0.1 /thinkPHP/%7B%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:{}
+
+[ 2015-05-13T00:18:23+08:00 ] 127.0.0.1 /thinkPHP/%7B%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:{}
+
+[ 2015-05-13T17:46:45+08:00 ] 127.0.0.1 /thinkPHP/%7F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:
+
+[ 2015-05-13T18:10:44+08:00 ] 127.0.0.1 /thinkPHP/index.php%7F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Index
+

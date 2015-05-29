@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>账号或密码格式错误,请重新输入.

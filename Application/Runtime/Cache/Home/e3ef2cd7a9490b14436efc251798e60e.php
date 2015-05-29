@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>两次密码输入不同,请重新输入
