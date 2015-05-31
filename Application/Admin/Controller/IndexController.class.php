@@ -10,5 +10,6 @@ class IndexController extends Controller {
         $array['phone'] = '189 7391 7391';
         $this->assign($array);
         $this->display();
+
     }
 }
