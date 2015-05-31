@@ -1,6 +1,21 @@
 <html>
-<head>
-    <script type="text/javascript" src="__PUBLIC__/Js/jquery-2.1.4.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-2.1.4.js"></script>
+<include file="Public/html/user_header"/>
+
+<body>
+
+<p id="notice"></p>
+<form id="reg_form" method="post" action="{:U('Home/User/register')}">
+
+    用户名:<input type="text" name="user_name">
+    密码: <input type="password" name = "password">
+    确认密码: <input type="password" name = "password2">
+    <input id="submit" type="button" value="注册">
+</form>
+
+</body>
+   
     <script>
         $(document).ready(function(){
             $("#submit").click(function(){
@@ -14,17 +29,5 @@
             });
         });
     </script>
-</head>
-
-<body>
-<p id="notice"></p>
-<form id="reg_form" method="post" action="{:U('Home/User/register')}">
-
-    用户名:<input type="text" name="user_name">
-    密码: <input type="password" name = "password">
-    确认密码: <input type="password" name = "password2">
-    <input id="submit" type="button" value="注册">
-</form>
-
-</body>
+<include file="Public/html/user_footer"/>
 </html>

@@ -42,7 +42,7 @@ class UserModel extends Model {
 
     public function register(){
 
-
+		
        // $user = D('User');
         if( !$this -> create()){
             exit($this -> getError());

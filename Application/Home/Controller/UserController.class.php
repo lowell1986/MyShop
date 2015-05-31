@@ -21,7 +21,7 @@ class UserController extends Controller {
     }
 
     public function register(){
-
+	
         if(IS_POST){
             $result = D('user')->register();
 
