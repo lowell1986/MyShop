@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>SELECT * FROM `shop_user` ORDER BY regist_time LIMIT 10

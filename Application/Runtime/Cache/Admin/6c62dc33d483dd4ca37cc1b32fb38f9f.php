@@ -39,7 +39,38 @@
 			左侧导航栏
 		</div>
 		<div class="right_content">
-			右侧内容区
+			
+
+<table class="table table-bordered table-hover">
+  <thead>
+
+	<th>ID</th>
+	<th>用户名</th>
+	<th>登录IP</th>
+	<th>注册时间</th>
+	<th>最后登录时间</th>
+  </thead>
+  <tbody>
+  
+  <?php if(is_array($user_list)): foreach($user_list as $key=>$user): ?><tr>
+		<td><?php echo ($user["id"]); ?></td>
+		<td><?php echo ($user["username"]); ?><</td>
+		<td><?php echo ($user["ip"]); ?></td>
+		<td><?php echo ($user["regist_time"]); ?></td>
+		<td><?php echo ($user["last_time"]); ?></td>
+	</tr><?php endforeach; endif; ?>
+
+
+
+    
+  </tbody>
+
+</table>
+
+
+
+
+
 		</div>
 		
 		
