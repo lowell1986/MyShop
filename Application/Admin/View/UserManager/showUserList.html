@@ -1,0 +1,53 @@
+<extend name="Public/tpl_base"/>
+<block name="left_navi">
+<include file="Public/tpl_user_menu"/>
+</block>
+<block name="right_content">
+
+<table class="table table-bordered table-hover">
+  <thead>
+
+	<th>ID</th>
+	<th>用户名</th>
+	<th>登录IP</th>
+	<th>注册时间</th>
+	<th>最后登录时间</th>
+  </thead>
+  <tbody>
+  
+  <foreach name="UserList" item="user">
+	<tr>
+		<td>{$user.id}</td>
+		<td>{$user.username}</td>
+		<td>{$user.ip}</td>
+		<td>{$user.regist_time}</td>
+		<td>{$user.last_time}</td>
+	</tr>
+  </foreach>
+
+  </tbody>
+
+</table>
+
+<nav align="center">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+	<for start="1" end="$pagin">
+		<li><a href="__URL__/showUserList?p={$i}">{$i}</a></li>
+	</for>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+</block>
+
+

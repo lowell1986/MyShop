@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><div> <a class="prev" href="/myshop/index.php/Admin/UserManager/showUserList/p/1.html"><<</a> <a class="num" href="/myshop/index.php/Admin/UserManager/showUserList/p/1.html">1</a><span class="current">2</span>  </div>

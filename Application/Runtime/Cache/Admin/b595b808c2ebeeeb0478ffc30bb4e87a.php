@@ -21,11 +21,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="<?php echo U('');?>">主页</a>
+			  <a class="navbar-brand" href="<?php echo U('Admin/Index/index');?>">主页</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="<?php echo U('Admin/User/getUserList');?>">会员管理</a></li>
+				<li class="active"><a href="<?php echo U('Admin/UserManager/showUserList');?>">会员管理</a></li>
 				<li><a href="#about">商品管理</a></li>
 				<li><a href="#contact">关于公司</a></li>
 			  </ul>
@@ -34,11 +34,11 @@
 	</nav>
 	
 	
-	<div class="container">
-		<div class="left_navi">
+	<div class="container-fluid">
+		<div class="left_navi col-md-2">
 			左侧导航栏
 		</div>
-		<div class="right_content">
+		<div class="right_content col-md-10">
 			右侧内容区
 		</div>
 		

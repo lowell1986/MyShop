@@ -18,6 +18,10 @@ class UserModel extends Model {
 
     protected $_auto = array(
         array('password' , 'md5' , 3 , 'function'),
+		array('regist_time' , 'time' , 1 , 'function'),
+		array('last_time' , 'time' , 1 , 'function'),
+		array('ip' , 'get_client_ip' , 1 , 'function'),
+		
     );
 
     public function login(){
