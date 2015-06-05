@@ -7,11 +7,10 @@ class UserModel extends Model{
 		$data = $this->order('regist_time')->limit(10)->select();
 		return $data;
 	}
-	public function getPage($user_count , $one_page_display_count){
+	public function getPage($start , $one_page_display_num){
 		
-		$data = $this->page(user_count , $one_page_display_count)->select();
+		$data = $this->page($start , $one_page_display_num)->select();
 	
-		dump($data);
 		return $data;
 	}
 }

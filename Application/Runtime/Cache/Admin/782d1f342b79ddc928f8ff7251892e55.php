@@ -71,7 +71,7 @@
   </thead>
   <tbody>
   
-  <?php if(is_array($UserList)): foreach($UserList as $key=>$user): ?><tr>
+  <?php if(is_array($now_page_content_list)): foreach($now_page_content_list as $key=>$user): ?><tr>
 		<td><?php echo ($user["id"]); ?></td>
 		<td><?php echo ($user["username"]); ?></td>
 		<td><?php echo ($user["ip"]); ?></td>
@@ -85,18 +85,25 @@
 
 <nav align="center">
   <ul class="pagination">
+	 
     <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+      <a href="/myshop/index.php/Admin/UserManager/showUserList/p/<?php echo ($previous_page); ?>" aria-label="Previous">
+        <span aria-hidden="true">上一页</span>
       </a>
     </li>
-	<?php $__FOR_START_4808__=1;$__FOR_END_4808__=$pagin;for($i=$__FOR_START_4808__;$i < $__FOR_END_4808__;$i+=1){ ?><li><a href="/myshop/index.php/Admin/UserManager/showUserList?p=<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+
+	<?php $__FOR_START_9724__=1;$__FOR_END_9724__=$page_count+1;for($i=$__FOR_START_9724__;$i < $__FOR_END_9724__;$i+=1){ ?><li><a href="/myshop/index.php/Admin/UserManager/showUserList/p/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
     <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+      <a href="/myshop/index.php/Admin/UserManager/showUserList/p/<?php echo ($next_page); ?>" aria-label="Next">
+        <span aria-hidden="true">下一页</span>
       </a>
+	   <li>
+	   <button type="button" class="btn btn-success " >查询到<?php echo ($total_count); ?>个会员</button>
+		<!--<span> 查询到<?php echo ($total_count); ?>个会员 </span> -->
+	</li>
     </li>
   </ul>
+ 
 </nav>
 
 

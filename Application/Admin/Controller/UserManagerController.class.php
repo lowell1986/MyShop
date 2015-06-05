@@ -1,35 +1,69 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-define(ONE_PAGE_SHOW , 3);
+define(ONE_PAGE_SHOW , 10);//每页显示条数
 class UserManagerController extends Controller {
 	public function showUserList(){
+		
+		$userManager = M("User");
+		
+		$total_count = (int)($userManager->count());
+		
+		//共有几页
+		$page_count = ceil($total_count / ONE_PAGE_SHOW);
+		/*
+		if($total_count % ONE_PAGE_SHOW){//有余数
+			$page_count = $total_count / ONE_PAGE_SHOW + 1;
+		}else{
+			$page_count = $total_count / ONE_PAGE_SHOW;
+		}*/
+		
+		//目前页数
 		if($_GET['p']){
-			
-			print('有P');
+			$now_page = (int)$_GET['p'];
 		}
 		else{
-			print('没有P');
+			$now_page = 1;
 		}
-		$userManager = D("User");
-		$user_list = $userManager->getUserList();
-		$user_count = (int)($userManager->count());
 		
-		$pagin = 0;
-		if($user_count % ONE_PAGE_SHOW){//有余数
-			$pagin = $user_count % ONE_PAGE_SHOW + 1;
-		}else{
-			$pagin = $user_count;
+		//第一页
+
+		$first_page = 1;
+		
+		//最后一页
+		$end_page = $page_count;
+		
+		//上一页
+		if($now_page > $first_page){
+			$previous_page = $now_page - 1;
 		}
-	
+		else{
+			$previous_page = $first_page; 
+		}
 		
-	
-		print(  $pagin );
-		//$pagin = $userManager->getPage($user_count , 3);
-		$this->assign('pagin', $pagin);
-		$this->assign('UserList', $user_list);
+		//下一页
+		if($now_page == $end_page){
+			$next_page = $end_page;
+		}
+		else{
+			$next_page = $now_page + 1;
+		}
 		
+		//获得当前页码的内容
+		$now_page_content_list = $userManager->page($now_page , ONE_PAGE_SHOW)->select();
+		
+		//dump($previous_page);
+		//将页码分配到html
+		$this->assign('total_count' , $total_count);
+		$this->assign('previous_page' , $previous_page);
+		$this->assign('next_page' , $next_page);
+		$this->assign('page_count' , $page_count);
+		$this->assign('now_page_content_list' , $now_page_content_list);
 		$this->display();
+		
+		
+		
+	
 	}
 	
 }
