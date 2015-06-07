@@ -7,7 +7,7 @@ class UserManagerController extends Controller {
 	public function showUserList(){
 		$userManager = M("User");
 		$total_count = $userManager->count();
-		$page = new \My\Page($total_count , 2);
+		$page = new \My\Page($total_count , 10);
 
 		$page->setConfig('prev',  '<span aria-hidden="true">上一页</span>');//上一页
 		$page->setConfig('next',  '<span aria-hidden="true">下一页</span>');//下一页

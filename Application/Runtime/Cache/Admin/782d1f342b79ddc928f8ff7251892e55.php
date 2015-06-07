@@ -46,11 +46,21 @@
 	 会员管理
   </a>
 
-  <div id="menu" class="collapse in">		
-  <a href="#" class="list-group-item id="11">&nbsp&nbsp&nbsp&nbsp会员编辑</a>
-  <a href="#" class="list-group-item">&nbsp&nbsp&nbsp&nbsp待定</a>
-  <a href="#" class="list-group-item">&nbsp&nbsp&nbsp&nbsp待定</a>
-  <a href="#" class="list-group-item">&nbsp&nbsp&nbsp&nbsp待定</a>
+  <div id="menu" class="collapse in">
+
+          <li>
+              <a href="#" class="list-group-item">会员编辑</a>
+          </li>
+          <li>
+              <a href="#" class="list-group-item">待定</a>
+          </li>
+          <li>
+              <a href="#" class="list-group-item">待定</a>
+          </li>
+          <li>
+              <a href="#" class="list-group-item">待定</a>
+          </li>
+
   </div>
 </div>
 
@@ -72,11 +82,11 @@
   <tbody>
   
   <?php if(is_array($list)): foreach($list as $key=>$user): ?><tr>
-		<td><?php echo ($user["id"]); ?></td>
-		<td><?php echo ($user["username"]); ?></td>
-		<td><?php echo ($user["ip"]); ?></td>
-		<td><?php echo ($user["regist_time"]); ?></td>
-		<td><?php echo ($user["last_time"]); ?></td>
+		<td><?php echo ($user['id']); ?></td>
+		<td><?php echo ($user['username']); ?></td>
+		<td><?php echo ($user['ip']); ?></td>
+		<td><?php echo date( 'Y-m-d' , $user['regist_time']);?></td>
+		<td><?php echo ($user['last_time']); ?></td>
 	</tr><?php endforeach; endif; ?>
 
   </tbody>
@@ -87,7 +97,7 @@
   <ul class="pagination">
 	<?php echo ($page); ?>
   </ul>
- 
+
 </nav>
 
 

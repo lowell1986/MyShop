@@ -17,11 +17,11 @@
   
   <foreach name="list" item="user">
 	<tr>
-		<td>{$user.id}</td>
-		<td>{$user.username}</td>
-		<td>{$user.ip}</td>
-		<td>{$user.regist_time}</td>
-		<td>{$user.last_time}</td>
+		<td>{$user['id']}</td>
+		<td>{$user['username']}</td>
+		<td>{$user['ip']}</td>
+		<td>{:date( 'Y-m-d' ,  $user['regist_time'])}</td>
+		<td>{$user['last_time']}</td>
 	</tr>
   </foreach>
 
@@ -33,7 +33,7 @@
   <ul class="pagination">
 	{$page}
   </ul>
- 
+
 </nav>
 
 
